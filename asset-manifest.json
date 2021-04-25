@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/IsaacArnold/to-do-app/static/css/main.100ffc59.chunk.css",
+    "main.js": "/IsaacArnold/to-do-app/static/js/main.c96a438a.chunk.js",
+    "main.js.map": "/IsaacArnold/to-do-app/static/js/main.c96a438a.chunk.js.map",
+    "runtime-main.js": "/IsaacArnold/to-do-app/static/js/runtime-main.b68475d0.js",
+    "runtime-main.js.map": "/IsaacArnold/to-do-app/static/js/runtime-main.b68475d0.js.map",
+    "static/js/2.0ac7b99e.chunk.js": "/IsaacArnold/to-do-app/static/js/2.0ac7b99e.chunk.js",
+    "static/js/2.0ac7b99e.chunk.js.map": "/IsaacArnold/to-do-app/static/js/2.0ac7b99e.chunk.js.map",
+    "static/js/3.d32dc641.chunk.js": "/IsaacArnold/to-do-app/static/js/3.d32dc641.chunk.js",
+    "static/js/3.d32dc641.chunk.js.map": "/IsaacArnold/to-do-app/static/js/3.d32dc641.chunk.js.map",
+    "index.html": "/IsaacArnold/to-do-app/index.html",
+    "static/css/main.100ffc59.chunk.css.map": "/IsaacArnold/to-do-app/static/css/main.100ffc59.chunk.css.map",
+    "static/js/2.0ac7b99e.chunk.js.LICENSE.txt": "/IsaacArnold/to-do-app/static/js/2.0ac7b99e.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b68475d0.js",
+    "static/js/2.0ac7b99e.chunk.js",
+    "static/css/main.100ffc59.chunk.css",
+    "static/js/main.c96a438a.chunk.js"
+  ]
+}
