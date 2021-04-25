@@ -1,0 +1,16 @@
+Components:
+    1. Title
+    2. Quote
+    3. Tasks
+    4. Add task button
+
+Basic functionality:
+    - When a user clicks the plus icon, they will be able to input txt for the task description
+        - Function:
+            - Some form of modal or reference will be needed for the user to type into
+        - State needed:
+            - Description
+            - isComplete --> default to false
+            - ID
+    - When the circle is clicked, the task becomes complete (and gets crossed off)
+        - This will change the state of isComplete from false(default) to true --> and when it becomes true, the task gets crossed out and removed from the list (ID reference here for removal)
