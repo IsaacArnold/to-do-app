@@ -20,11 +20,11 @@ const ToDoForm = ({ addTodo }) => {
         type="text"
         className="input"
         placeholder="Add a task"
-        maxLength="22"
+        maxLength="20"
         value={value}
         onChange={handleValueChange}
       />
-      <p className="character-count">Max characters: 22</p>
+      <p className="character-count">Max characters: 20</p>
     </form>
   );
 };

@@ -4,6 +4,8 @@ import Header from "./Components/Header";
 import Quote from "./Components/Quote";
 import Todo from "./Components/Todo";
 import ToDoForm from "./Components/ToDoForm";
+import { Icon } from "@iconify/react";
+import saveIcon from "@iconify/icons-carbon/save";
 
 // Main to-do code inspiration is from: https://www.digitalocean.com/community/tutorials/how-to-build-a-react-to-do-app-with-react-hooks
 
@@ -34,17 +36,37 @@ function App() {
     setTodos(newTodos);
   };
 
-  // const [editing, setEditing] = useState(false);
-  // const editTodo = (index) => {
-  //   setEditing(true);
-  // };
+  const showEdittedTodos = (text) => {
+    const edittedTodos = [...todos, { text }];
+    setTodos(edittedTodos);
+  };
 
-  // let displayEdit = {};
-  // if (editing) {
-  //   displayEdit.display = "";
-  // } else {
-  //   displayEdit.display = "none";
-  // }
+  // Edit idea came from: https://ibaslogic.com/how-to-edit-todos-items-in-react/
+  const [editing, setEditing] = useState(false);
+  const [editText, setEditText] = useState("");
+  const editTodo = (index, todo) => {
+    setEditing(true);
+    setEditText(todo.text);
+    removeTodo(index);
+  };
+
+  const handleEditChange = (e) => {
+    setEditText(e.target.value);
+  };
+
+  const handleEditSubmit = (e) => {
+    e.preventDefault();
+    if (!editText) return;
+    showEdittedTodos(editText);
+    setEditing(false);
+  };
+
+  let displayEdit = {};
+  if (editing) {
+    displayEdit.display = "";
+  } else {
+    displayEdit.display = "none";
+  }
 
   return (
     <div className="app">
@@ -59,11 +81,29 @@ function App() {
             todo={todo}
             completeTodo={completeTodo}
             removeTodo={removeTodo}
-            // editTodo={editTodo}
+            editTodo={editTodo}
           />
         ))}
-        {/* <input type="text" className="test" style={displayEdit} /> */}
       </div>
+      <form
+        onSubmit={handleEditSubmit}
+        style={displayEdit}
+        className="edit-form"
+      >
+        <input
+          type="text"
+          className="test"
+          value={editText}
+          onChange={handleEditChange}
+          maxLength="20"
+        />
+        <Icon
+          icon={saveIcon}
+          className="save"
+          style={{ color: "#FFF", fontSize: "23px" }}
+          onClick={handleEditSubmit}
+        />
+      </form>
       <ToDoForm addTodo={addTodo} />
     </div>
   );

@@ -109,18 +109,23 @@ input {
     display: none;
   }
   .cross {
-    margin-left: auto;
+    margin-left: 10px;
     margin-right: 5px;
     g path {
       stroke: #7041ff;
     }
   }
-  // .pencil {
-  //   margin-left: auto;
-  //   // path {
-  //   //   fill: #25c0b7;
-  //   // }
-  // }
+  .pencil {
+    margin-left: auto;
+  }
+}
+
+.edit-form {
+  display: flex;
+  align-items: center;
+  .save {
+    margin-left: 5px;
+  }
 }
 
 .character-count {
