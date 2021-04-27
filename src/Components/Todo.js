@@ -3,8 +3,9 @@ import { Icon } from "@iconify/react";
 import circleIcon from "@iconify/icons-akar-icons/circle";
 import crossIcon from "@iconify/icons-akar-icons/cross";
 import tickSmallOutline from "@iconify/icons-teenyicons/tick-small-outline";
+// import bxsPencil from "@iconify/icons-bx/bxs-pencil";
 
-const Todo = ({ todo, index, completeTodo, removeTodo }) => {
+const Todo = ({ todo, index, completeTodo, removeTodo, editTodo }) => {
   return (
     <div className="todo">
       <Icon
@@ -17,6 +18,11 @@ const Todo = ({ todo, index, completeTodo, removeTodo }) => {
         className={todo.isCompleted ? "tick" : "no-tick"}
       />
       <p className={todo.isCompleted ? "completed" : ""}>{todo.text}</p>
+      {/* <Icon
+        icon={bxsPencil}
+        className="pencil"
+        onClick={() => editTodo(index)}
+      /> */}
       <Icon
         icon={crossIcon}
         className="cross"

@@ -9,12 +9,13 @@ import ToDoForm from "./Components/ToDoForm";
 
 function App() {
   const savedItems = JSON.parse(localStorage.getItem("todos"));
-  const [todos, setTodos] = useState(savedItems || []);
 
   // Local storage code assistance is from: https://dev.to/saranshk/react-hooks-and-local-storage-let-s-build-a-todo-app-39g3
   useEffect(() => {
     localStorage.setItem("todos", JSON.stringify(todos));
   });
+
+  const [todos, setTodos] = useState(savedItems || []);
 
   const addTodo = (text) => {
     const newTodos = [...todos, { text }];
@@ -33,6 +34,18 @@ function App() {
     setTodos(newTodos);
   };
 
+  // const [editing, setEditing] = useState(false);
+  // const editTodo = (index) => {
+  //   setEditing(true);
+  // };
+
+  // let displayEdit = {};
+  // if (editing) {
+  //   displayEdit.display = "";
+  // } else {
+  //   displayEdit.display = "none";
+  // }
+
   return (
     <div className="app">
       <Header />
@@ -46,8 +59,10 @@ function App() {
             todo={todo}
             completeTodo={completeTodo}
             removeTodo={removeTodo}
+            // editTodo={editTodo}
           />
         ))}
+        {/* <input type="text" className="test" style={displayEdit} /> */}
       </div>
       <ToDoForm addTodo={addTodo} />
     </div>
