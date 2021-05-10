@@ -1,6 +1,7 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "To-Do App",
+  "name": "Isaac's To-Do App",
+  "description": "A simple to-do app built using React and styled with SCSS.",
   "icons": [
     {
       "src": "favicon.ico",
