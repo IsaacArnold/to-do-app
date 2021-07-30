@@ -1,2 +1,2 @@
 # to-do-app
- A simple to-do app I create using React
+ A simple to-do app I created using React
