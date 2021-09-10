@@ -20,7 +20,6 @@ const ToDoForm = ({ addTodo }) => {
         type="text"
         className="input"
         placeholder="Add a task"
-        // maxLength="20"
         value={value}
         onChange={handleValueChange}
       />
