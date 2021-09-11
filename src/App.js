@@ -95,6 +95,7 @@ function App() {
           className="test"
           value={editText}
           onChange={handleEditChange}
+          maxLength="20"
         />
         <Icon
           icon={saveIcon}
