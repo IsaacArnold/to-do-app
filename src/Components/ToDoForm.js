@@ -23,7 +23,7 @@ const ToDoForm = ({ addTodo }) => {
         value={value}
         onChange={handleValueChange}
       />
-      <p className="character-count">Max characters: 20</p>
+      {/* <p className="character-count">Max characters: 20</p> */}
     </form>
   );
 };
